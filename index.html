@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sweet Scoops</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="icecream-bg"></div>
+
+<!-- NAVBAR -->
+<header class="navbar">
+
+<div class="logo">🍦 Sweet Scoops</div>
+
+<div class="menu-toggle" onclick="toggleMenu()">
+
+</div>
+
+<nav id="navMenu">
+
+<a href="#home">Home</a>
+<a href="#flavors">Flavors</a>
+<a href="#about">About</a>
+<a href="#order">Order Status</a>
+<a href="#contact">Contact</a>
+<a href="#adminLogin">Admin</a>
+
+</nav>
+<li class="cart-btn" onclick="viewCart()">
+🛒 Cart <span id="cartCount">0</span>
+</li>
+
+</header>
+
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-text">
+    <h1>Delight in Every Scoop!</h1>
+    <h3>Handcrafted Ice Cream with Love</h3>
+    <a href="#flavors" class="btn">Explore Flavors</a>
+  </div>
+  <div class="hero-sparkles"></div>
+</section>
+
+<!-- FLAVORS -->
+<section id="flavors">
+  <h2>Our Popular Flavors</h2>
+  <div class="flavor-cards">
+    <!-- Line 1: 5 Flavors -->
+    <div class="card">
+      <img src="images/vanilla.jpg" alt="Vanilla">
+      <p>Vanilla</p>
+      <p>₹120</p>
+      <button class="addBtn" onclick="addToCart('Vanilla', 120)">Add to Cart</button>
+      <button class="orderBtn" onclick="orderNow('Vanilla', 120)">Order Now</button>
+    </div>
+    <div class="card">
+      <img src="images/chocolate.jpg" alt="Chocolate">
+      <p>Chocolate</p>
+      <p>₹150</p>
+      <button class="addBtn" onclick="addToCart('Chocolate', 150)">Add to Cart</button>
+      <button class="orderBtn" onclick="orderNow('Chocolate', 150)">Order Now</button>
+    </div>
+    <div class="card">
+      <img src="images/strawberry.jpg" alt="Strawberry">
+      <p>Strawberry</p>
+      <p>₹140</p>
+      <button class="addBtn" onclick="addToCart('Strawberry', 140)">Add to Cart</button>
+      <button class="orderBtn" onclick="orderNow('Strawberry', 140)">Order Now</button>
+    </div>
+    <div class="card">
+      <img src="images/butterscotch.jpg" alt="Butterscotch">
+      <p>Butterscotch</p>
+      <p>₹160</p>
+      <button class="addBtn" onclick="addToCart('Butterscotch', 160)">Add to Cart</button>
+      <button class="orderBtn" onclick="orderNow('Butterscotch', 160)">Order Now</button>
+    </div>
+    <div class="card">
+      <img src="images/mango.jpg" alt="Mango">
+      <p>Mango</p>
+      <p>₹130</p>
+      <button class="addBtn" onclick="addToCart('Mango', 130)">Add to Cart</button>
+      <button class="orderBtn" onclick="orderNow('Mango', 130)">Order Now</button>
+    </div>
+
+    <!-- Line 2: 5 Flavors -->
+    <div class="card">
+      <img src="images/pista.jpg" alt="Pista">
+      <p>Pista</p>
+      <p>₹150</p>
+      <button class="addBtn" onclick="addToCart('Pista', 150)">Add to Cart</button>
+      <button class="orderBtn" onclick="orderNow('Pista', 150)">Order Now</button>
+    </div>
+    <div class="card">
+      <img src="images/coffee.jpg" alt="Coffee">
+      <p>Coffee</p>
+      <p>₹140</p>
+      <button class="addBtn" onclick="addToCart('Coffee', 140)">Add to Cart</button>
+      <button class="orderBtn" onclick="orderNow('Coffee', 140)">Order Now</button>
+    </div>
+    <div class="card">
+      <img src="images/oreo.png" alt="Oreo">
+      <p>Oreo</p>
+      <p>₹160</p>
+      <button class="addBtn" onclick="addToCart('Oreo', 160)">Add to Cart</button>
+      <button class="orderBtn" onclick="orderNow('Oreo', 160)">Order Now</button>
+    </div>
+    <div class="card">
+      <img src="images/blackcurrent.png" alt="Black Currant">
+      <p>Black Currant</p>
+      <p>₹130</p>
+      <button class="addBtn" onclick="addToCart('Black Currant', 130)">Add to Cart</button>
+      <button class="orderBtn" onclick="orderNow('Black Currant', 130)">Order Now</button>
+    </div>
+    <div class="card">
+      <img src="images/blueberry.jpg" alt="Blueberry">
+      <p>Blueberry</p>
+      <p>₹140</p>
+      <button class="addBtn" onclick="addToCart('Blueberry', 140)">Add to Cart</button>
+      <button class="orderBtn" onclick="orderNow('Blueberry', 140)">Order Now</button>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2 class="gradient-text">About Sweet Scoops</h2>
+  <div class="about-container">
+    <div class="about-image">
+      <img src="images/about.jpg" alt="Delicious Ice Cream">
+    </div>
+    <div class="about-text">
+      <p>Welcome to <strong>Sweet Scoops</strong>, your ultimate destination for handcrafted ice cream! From classic flavors to unique blends, we ensure every scoop is delicious.</p>
+      <p>Our mission is simple – bring happiness in every scoop. Creamy, smooth, and indulgent, we never compromise on quality.</p>
+      <p>Whether it's a family treat, celebration, or personal indulgence, Sweet Scoops has something for everyone.</p>
+      <p>Come explore our flavors and discover why <strong>Sweet Scoops</strong> is loved by ice cream enthusiasts everywhere!</p>
+    </div>
+  </div>
+  <div class="about-sparkles"></div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2 class="gradient-text">Contact Us</h2>
+  <p class="contact-subtitle">Have a question or want to place a custom order? Fill out the form below!</p>
+  <div class="contact-card">
+    <div class="contact-form">
+      <input type="text" id="contactName" placeholder="Your Name">
+      <input type="email" id="contactEmail" placeholder="Your Email">
+      <input type="text" id="contactMobile" placeholder="Your Mobile Number">
+      <textarea id="contactMessage" placeholder="Your Message / Query"></textarea>
+      <button onclick="submitContact()">Submit</button>
+      <div id="contactResult"></div>
+    </div>
+    <div class="contact-image">
+      <img src="images/contact.jpg" alt="Ice Cream Contact">
+    </div>
+    <div class="contact-sparkles"></div>
+  </div>
+</section>
+
+<!-- ORDER STATUS -->
+<section id="order">
+
+<h2>Check Your Order Status</h2>
+
+<input type="text" id="statusMobile" placeholder="Enter Mobile Number">
+
+<button onclick="checkOrderStatus()">Check Status</button>
+
+<div id="orderResult"></div>
+
+<div class="tracking">
+
+<div class="step" id="step1">Order Placed</div>
+<div class="step" id="step2">Preparing</div>
+<div class="step" id="step3">Out for Delivery</div>
+<div class="step" id="step4">Delivered</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ADMIN LOGIN -->
+
+<section id="adminLogin">
+
+<h2>Admin Login</h2>
+
+<div class="login-box">
+
+<input type="text" id="adminUser" placeholder="Username">
+<input type="password" id="adminPass" placeholder="Password">
+
+<button onclick="adminLogin()">Login</button>
+
+</div>
+
+</section>
+
+
+
+<!-- ADMIN PANEL -->
+<section id="adminPanel" style="display:none;">
+
+<h2 class="admin-title">Admin Dashboard</h2>
+
+<div class="admin-stats">
+
+<div class="stat-box">
+<h3>Total Orders</h3>
+<p id="totalOrders">0</p>
+</div>
+
+<div class="stat-box">
+<h3>Total Queries</h3>
+<p id="totalQueries">0</p>
+</div>
+
+<div class="stat-box">
+<h3>Cart Items</h3>
+<p id="cartStats">0</p>
+</div>
+
+</div>
+
+<div class="admin-actions">
+
+<button onclick="clearOrders()">Clear Orders</button>
+<button onclick="clearQueries()">Clear Queries</button>
+<button onclick="logout()">Logout</button>
+
+</div>
+
+<h3>Customer Orders</h3>
+
+<table id="orderTable">
+<thead>
+<tr>
+<th>Name</th>
+<th>mobile</th>
+<th>flavour</th>
+<th>Status</th>
+<th>Date & time</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+
+<h3>Customer Queries</h3>
+
+<table id="queryTable">
+
+<thead>
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Mobile</th>
+<th>Message</th>
+<th>Status</th>
+</tr>
+</thead>
+
+<tbody></tbody>
+
+</table>
+
+<div id="orderNotification" class="notification">
+
+🔔 New Order Received!
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
